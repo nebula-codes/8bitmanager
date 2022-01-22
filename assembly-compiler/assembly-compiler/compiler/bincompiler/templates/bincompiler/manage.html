@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+
+
+
+
+
+<p><a href="{% url 'manage' %}">Return to home</a></p>
+
+
+<table class="ms-table">
+  <thead>
+      <tr>
+          <th>id</th>
+          <th>filename</th>
+          <th>Actions</th>
+          <th>Delete</th>
+      </tr>
+  </thead>
+  <tbody>
+
+    {% for code in codes%}
+
+      <tr>
+        <td>{{code.id}}</td>
+        <td>{{code.name}}{{code.extension}}</td>
+        {% if code.extension == '.s' %}
+        <td><button style="margin-right:10px;" class="ms-warning ms-small">Compile</button><button class="ms-warning ms-small ms-disabled">Edit</button></td>
+        {% elif code.extension == '.out' %}
+        <td><button class="ms-warning ms-small">Push</button></td>
+        {% else %}
+        <td><button class="ms-warning ms-small ms-disabled">Edit</button></td>
+
+        {% endif %}
+        <td><button class="ms-danger ms-small">x</button></td>
+      </tr>
+
+    {%endfor %}
+
+  </tbody>
+</table>
+
+
+<form method="post" enctype="multipart/form-data">
+  <div class="row"> 
+  {% csrf_token %}
+    <div class="col-sm">
+        {{uploadForm.name}}
+        
+      </div>
+
+      <div class="col-sm">
+        {{uploadForm.file}}
+        
+      </div>
+
+      <div class="col-sm">
+        <div><button class="ms-btn ms-success ms-fullwidth">Upload</button></div>
+      </div>
+
+      
+  </div>
+</form>
+
+</div>
+{% endblock %}
