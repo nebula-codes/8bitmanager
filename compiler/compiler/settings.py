@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'eightbit.apps.EightbitConfig',
     'bincompiler.apps.BincompilerConfig',
     'django.contrib.admin',
     'django.contrib.auth',

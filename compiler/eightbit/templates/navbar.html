@@ -1,0 +1,25 @@
+<!-- Navbar with content justified between -->
+<nav class="navbar justify-content-between"> <!-- justify-content-between = justify-content: space-between -->
+    <!-- Navbar content with menu button -->
+    <!-- Navbar brand -->
+    <a href="#" class="navbar-brand">
+      <p>8Bit Manager</p>
+    </a>
+    <!-- Navbar content with sign up button -->
+    <ul class="navbar-nav ml-auto"> <!-- ml-auto = margin-left: auto -->
+        <li class="nav-item dropdown with-arrow">
+          <a class="nav-link" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+            <button class="btn" data-toggle="dropdown" type="button" id="navbar-dropdown-toggle-btn-1">
+                Menu
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button>
+            <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+            <a href="/bincompiler/manage" class="dropdown-item">Bin Compiler</a>
+            <a href="/eightbit/" class="dropdown-item">8Bit Manager</a>
+
+          </div>
+        </li>
+      </ul>
+  </nav>
