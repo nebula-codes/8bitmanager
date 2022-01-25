@@ -2,9 +2,98 @@
 
 {% block content %}
 
-<div class="content" style="margin-top:5em;">
+<div class="container-fluid" style="margin-top:5em;">
+<div class="row">
+    <div class="col-sm text-center">
+        <h1><b>8 Bit Computer Controller</b></h1>
+    </div>
+</div>
 
+<div class="row">
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Clock Status</b>
+            </h2>
+            <p>
+                Toggle Clock
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+              <a href="#" class="btn btn-primary">On</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Memory Status</b>
+            </h2>
+            <p>
+                Toggle Memory into Run/Prog Mode
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+              <a href="#" class="btn btn-primary">Run</a>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Reset Computer</b>
+            </h2>
+            <p>
+                Reset Clock
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+              <a href="#" class="btn btn-danger">Reset</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Execute Code</b>
+            </h2>
+            <p>
+                Push the instructions in the Code Block
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+              <a href="#" class="btn btn-primary">Push Code</a>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Memory Address Register</b>
+            </h2>
+            <p>
+                Go to a location on the RAM (0-15)
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+                <input type="text"/>
+                <a href="#" class="btn btn-primary">Go To Address</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm text-center">
+        <div class="card">
+            <h2 class="card-title">
+              <b>Fast Upload</b>
+            </h2>
+            <p>
+                Automated Code Execution (WIP)
+            </p>
+            <div class="text-center"> <!-- text-right = text-align: right -->
+              <a href="#" class="btn btn-primary">Upload Code</a>
+            </div>
+          </div>
+    </div>
+</div>
 
-    
 </div>
 {% endblock %}
