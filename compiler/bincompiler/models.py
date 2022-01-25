@@ -17,6 +17,10 @@ class CodeSource(models.Model):
     name = models.CharField(max_length=200)
     file = models.FileField(upload_to='documents/', null=True, blank=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
+    hascompiled = models.BooleanField(default=False)
+
+
+    
 
     def __str__(self):
         return self.name
